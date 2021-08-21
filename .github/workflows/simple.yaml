@@ -12,8 +12,14 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: python commnad
-        run: |
-          import platform
-          print(platfrom.processor())
-        shell: python
+  
+  run-window-commands:
+    runs-on: windows-latest
+    steps:
+      - name: directory 
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
+        
+
